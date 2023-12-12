@@ -1,21 +1,17 @@
 import './App.css';
-import {useState} from 'react'
+import {useState, createContext} from 'react'
+import LoginForm from './components/LoginForm';
 import Panel from './components/Panel';
-function App() {
 
-  const [theme, setTheme] = useState('light');
-  
-  const handleChangeTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  }
-  console.log(theme);
+
+
+function App() {
   return (
-    <div className="container">
-      {/* <button className='btn btn-sm btn-danger'
-         onClick={handleChangeTheme}
-      > Dark mode </button> */}
-      <Panel theme = {theme} handleChangeTheme = {handleChangeTheme}/>
-    </div>
+        <div className="container">
+            <Panel/>
+            {/* <LoginForm/> */}
+        </div>
+    
   );
 }
 

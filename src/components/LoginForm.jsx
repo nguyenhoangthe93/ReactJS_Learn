@@ -1,6 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
+import { ThemeContext } from "../Context/ThemeContext";
 
-function LoginForm({theme , handleChangeTheme}) {
+function LoginForm() {
+    const {theme , handleChangeTheme} = useContext(ThemeContext)
+
     return (
       <div className={`p-2 ${theme}`}>
         <h3>Login Form</h3>
@@ -19,6 +22,7 @@ function LoginForm({theme , handleChangeTheme}) {
              <button type='button' className='btn btn-danger'
                  onClick={handleChangeTheme}
               > Dark mode </button>
+
           </div>
         </form>
       </div>
